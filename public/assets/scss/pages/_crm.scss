@@ -1,0 +1,202 @@
+.c-con{
+	h4{
+		img{
+			width: 22px;
+            margin-left: 8px;
+		}
+	}
+}
+.c-con-prise{
+	margin-top: 18px;
+	h3{
+		font-weight:600;
+	}
+}
+.c-con-3d{
+	position: relative;
+	img{
+		position: absolute;
+		right: 0px;
+		top: -28px;
+		width: 172px;
+		@include custommq($max:1600px){
+			right: -7px;
+			top: -10px;
+			width: 150px;
+		}
+		@include custommq($max:1500px){
+			width: 111px;
+		}
+		@include respond ('laptop'){
+			width:73px;
+		}
+		@include respond ('tab-land'){
+			width: 145px;
+		}
+		@include custommq($max:626px){
+			    width: 100px;
+		}
+	}
+}
+.crm-cart{
+	height:200px;
+	overflow: hidden;
+	.card-header{
+		svg{
+			path{
+				fill:var(--primary);
+			}
+		}
+		span{
+			i{
+				transform: scale(0.8);
+			}
+		}
+	}
+	.crm-cart-data{
+		p{
+			font-size:24px;
+			margin-bottom:0;
+			color: black;
+			font-weight:600;
+		}
+	}
+	#columnChart{
+		margin-top: -61px;
+	}
+	h4{
+		font-size:24px;
+		font-weight: 600;
+		small{
+			font-size: 13px;
+		}
+	}
+}
+.lang-chart{
+	display:flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+	li{
+		font-weight: 400;
+        color: black;
+		i{
+			color:var(--secondary);
+			margin-right:10px;
+		}
+	}
+}
+.crm-p-list{
+	display:flex;
+	justify-content:space-between;
+	margin-top: -66px;
+	margin-bottom: 16px;
+	@include respond ('phone-land'){
+		margin-top:0;
+	}
+	
+}
+.c-line{
+	position:relative;
+	
+	&:before{
+		position:absolute;
+		content:"";
+		top:0;
+		left: -10px;
+		background:$border;
+		height: 141%;
+		top: -89px;
+		width: 1px;
+	}
+	@include respond ('phone-land'){
+		margin-bottom:25px;
+	}
+}
+.p-list{
+	display:flex;
+	margin-bottom: 14px;
+	.icon-box{
+		i{
+			transform: scale(1.4);
+		}
+	}
+	h6{
+		font-size: 14px;
+        font-weight: 400;
+	}
+	span{
+		font-size:12px;
+	}
+}
+.project-scroll{
+	height: 250px;
+}
+.sociallinks{
+	li{
+		margin-bottom:20px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+.crm-ads-list{
+	li{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom:10px;
+		h6{
+			margin-bottom:0;
+		}
+		span{
+			font-weight: 500;
+		}
+	}
+}
+.dots-crm{
+	display:flex;
+	align-items:center;
+	.dots{
+		display: inline-block;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-radius: 50%;
+		vertical-align: middle;
+		margin-right:5px;
+	}
+}
+#ExtraData{
+	margin-top: -43px;
+}
+.payment-tbl{
+	thead{
+		tr{
+			th{
+				font-size: 13px;
+				padding: 0.625rem 1.25rem;
+				font-weight: 500;
+				background-color: var(--rgba-primary-1);
+				border: 0;
+				vertical-align: middle;
+			}
+		}
+	}
+	tbody{
+		tr{
+			td{
+				font-size: 13px;
+				font-weight: 400;
+				padding: 0.625rem 1.25rem;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				h6{
+					margin-bottom:0;
+				}
+			}
+		}
+	}
+}
+@include custommq($max: 1600px , $min:1199px) {
+	.clm-chart{
+		display:none;
+	}
+}

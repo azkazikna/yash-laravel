@@ -1,0 +1,169 @@
+.any-card{
+	display:flex;
+	justify-content:space-between;
+	.harry-img{
+		height:200px;
+		transform: scale(1.1);
+		position: absolute;
+		right: 32px;
+        bottom: 0;
+		@include custommq($max:1600px){
+			height:165px;
+		}
+		@include custommq($max:1326px){
+			height: 140px;
+		}
+		@include respond ('phone'){
+			height: 97px;
+			right: 25px;
+			bottom: 24px;
+		}
+	}
+	.c-con{
+		width:50%;
+		p{
+			margin-bottom: 44px;
+		}
+		@include custommq($max:1326px){
+			p{
+				margin-bottom: 12px;
+			}
+		}
+		@include respond ('phone'){
+			width: 64%;
+		}
+	}
+}
+.sales-bx{
+	padding: 10px 40px;
+    text-align: center;
+    border-radius:$radius;
+	background: rgba(255,255,255,0.1);
+	min-width: 164px;
+	@include custommq($max:1880px){
+		min-width: 120px;
+		padding: 9px 30px;
+	}
+	@include custommq($max:1670px){
+		padding: 9px 20px;
+	}
+	img{
+		width:45px;
+	}
+	h4{
+		margin-bottom: 0;
+		margin-top: 6px;
+		font-weight: 600;
+		color:$white;
+	}
+	span{
+		color:$white;	
+	}
+	@include custommq($max:1500px){
+		img{
+			width: 30px;
+		}
+		padding: 9px 10px;
+		min-width: 70px
+	}
+	@include respond ('tab-land'){
+		padding: 9px 32px;
+		min-width: 168px;
+	}
+	@include respond ('tab-port'){
+		min-width: 140px;
+	}
+}
+.analytics-card{
+	.ic-n-bx{
+		text-align:center;
+		margin-top: -38px;
+        margin-bottom: 20px;
+		@include respond ('phone'){
+			margin-top: -24px;
+			margin-bottom: 6px;
+		}
+		.icon-box {
+			i{
+				transform: scale(1.3);
+	
+			}
+			line-height: 2.575rem;
+		}	
+	}
+	.ana-box{
+		text-align:center;
+		.anta-data{
+			h3{
+	 			margin-top: 24px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+}
+.ov-card{
+	cursor:pointer;
+	&:hover{
+		background:var(--primary);
+		border-color:var(--primary);
+		h5,span,h3{
+			color:$white;
+		}
+		.icon-box{
+			background-color:$white!important;
+			i{
+				color:var(--primary)!important;
+			}
+		}
+	}
+}
+.country-sale{
+	.country-flag{
+		img{
+			width:40px;
+		}
+	}
+	li{
+		margin-bottom:12px;
+		padding:0 1.25rem;
+	}
+	height: 325px;
+}
+.recent-activity{
+	.active-data{
+		h5{
+			font-size: 14px;
+		}
+		span{
+			font-size: 12px;
+		}
+	}
+}
+.activity-sale{
+	height: 325px;
+	padding: 0 20px;
+	.recent-activity{
+		margin-bottom:12px;
+		position:relative;
+		align-items: center;
+		&:after{
+			position: absolute;
+			content: "";
+			top: 1.888rem;
+			left: 0.3rem;
+			width: 0.063rem;
+			height: 100%;
+			background: #e4e4e4;
+		}
+		&:last-child{
+			&:after{
+				content:none;
+			}
+		}
+	}
+}
+.chartBar1{
+	margin-top: -31px;
+    margin-left: -21px;
+}

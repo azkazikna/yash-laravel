@@ -1,0 +1,236 @@
+[data-sidebar-style="mini"],
+[data-layout="horizontal"] {
+    .nav-control {
+        display: none;
+    }
+}
+
+[data-header-position="fixed"] {
+    .nav-header {
+        position: fixed;
+    }
+}
+.brand-logo {
+	img{
+		// width: 12.7rem;
+	}
+}
+.nav-header {
+    height: 4.375rem;
+    width: 15rem;
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    top:0;
+    background-color:var(--nav-headbg);
+    transition: all .2s ease;
+    z-index: 5;
+	
+    .logo-compact {
+        display: none;
+    }
+	.brand-title-color {
+        display: none;
+    }
+
+    .brand-logo {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.125rem;
+        color: $white;
+        text-decoration: none;
+		padding-left: 1.1rem;
+		padding-right: 3rem;
+        font-weight: 700;
+		
+		@include respond('laptop') {
+			padding-left: 1.25rem;
+			padding-right:1.25rem;
+		}
+		
+        [data-sidebar-style="compact"] &,
+        [data-sidebar-style="mini"] & {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+        @include respond('phone-land') {
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+    }
+	.logo-abbr{
+		/* height:45px;
+		width:45px; */
+	}
+	.logo-mini{
+		display:none;
+	}
+	.logo-color{
+		display:none;
+			@include respond ('phone-land'){
+			display:block;
+			/* height:45px;
+			width:45px; */
+		}
+	}
+	
+    .brand-title {
+		margin-left: 0.6375rem;
+		max-width: 10.15rem;
+		margin-top: 0.2rem;
+		font-size: 2.375rem;
+		color: $black;
+        @at-root [data-theme-version="dark"] & {
+            background-position: 0 120%;
+        }
+    }
+	@include respond ('phone-land'){
+		top:0;
+	}
+	
+	.rect-primary-rect{
+		fill:var(--primary);
+	}
+}
+
+@include custommq($max:63.9375rem) {
+    .nav-header {
+        width: 5rem;
+        .brand-title {
+            display: none;
+        }
+    }
+}
+
+.nav-control {
+    cursor: pointer;
+    position: absolute;
+    right: -0.7rem;
+    text-align: center;
+	top: 50.8%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    font-size: 1.4rem;
+    border-radius:$radius-sm;
+	background-color:$white;
+	height:30px;
+	width:30px;
+	box-shadow:0px, 5px rgba(34, 43, 64, 0.4);
+	
+    @include respond('phone-land') {
+        right: -1.5rem;
+    }
+}
+
+////////////////////
+// Humbuger Icon
+////////////////////
+.hamburger {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    width: 1.625rem;
+    z-index: 999;
+	@include respond ('phone-land'){
+		 top: 2px;
+	}
+}
+
+.hamburger .line {
+    display: block;
+    border-radius: 0.1875rem;
+    margin-top: 0.375rem;
+    margin-bottom: 0.375rem;
+    margin-right: auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+	
+}
+
+.hamburger svg {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    z-index: 1;
+	
+}
+.hamburger.is-active{
+	svg {
+		transform: rotate(180deg);
+	}
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+
+
+@media (min-width:47.9375rem) {
+    [data-sidebar-style="compact"] {
+        .nav-control {
+            display: none;
+        }
+        .nav-header {
+            width: 11.25rem;
+        }
+    }
+}
+
+[data-sidebar-style="full"][data-layout="vertical"] {
+    .menu-toggle {
+        .brand-title {
+            display: none;
+        }
+    }
+}
+
+[data-sidebar-style="full"][data-layout="horizontal"] {
+    .logo-compact {
+        display: none;
+    }
+}
+
+[data-sidebar-style="mini"] {
+    .nav-header {
+		//height:5rem;
+        
+		@include custommq($max: 63.9375rem){
+			//height:5rem;
+		}
+    }
+}
+
+[data-sidebar-style="compact"][data-layout="vertical"] {
+    .nav-header {
+        .brand-title {
+            display: none;
+        }
+        .logo-compact {
+            max-width: 4.6875rem;
+        }
+    }
+}
+[data-sidebar-style="compact"][data-layout="horizontal"] {
+    .nav-header .brand-logo {
+        padding-left: 1.875rem;
+		padding-right: 1.875rem;
+		justify-content: start;
+    }
+}
+[data-sidebar-style="modern"][data-layout="vertical"] {
+    .nav-header {
+        width: 10.625rem;
+        .brand-title {
+            display: none;
+        }
+        .logo-compact {
+            display: none;
+        }
+    }
+}
